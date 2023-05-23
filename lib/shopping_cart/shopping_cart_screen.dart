@@ -18,95 +18,182 @@ class _Shopping_cart_screenState extends State<Shopping_cart_screen> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Your Cart'),
-          
         ),
         drawer: const MenuHome(),
         body: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            const SizedBox(
+            Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Image(
+                    height: 80,
+                    width: 80,
+                    image: AssetImage("assets/images/product_0.png"),
+                  ),
+                  SizedBox(
+                    width: 130,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        RichText(
+                          overflow: TextOverflow.ellipsis,
+                          text: TextSpan(
+                              text: 'Name: ',
+                              style: TextStyle(
+                                  color: Colors.blueGrey.shade800,
+                                  fontSize: 13.0),
+                              children: [
+                                TextSpan(
+                                    text: 'Long Sleeve Shirts',
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold)),
+                              ]),
+                        ),
+                        RichText(
+                          maxLines: 1,
+                          text: TextSpan(
+                              text: 'Price: ' r"$",
+                              style: TextStyle(
+                                  color: Colors.blueGrey.shade800,
+                                  fontSize: 13.0),
+                              children: [
+                                TextSpan(
+                                    text: '\165',
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold)),
+                              ]),
+                        ),
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.delete,
+                        color: Colors.red.shade800,
+                      )),
+                ]),
+            SizedBox(
               height: 20,
             ),
-            Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                  side: const BorderSide(color: Colors.deepPurple, width: 1)),
-              child: ListTile(
-                title: const Text(
-                  'Phan Thị Thu Hằng',
-                  style: TextStyle(fontSize: 20),
-                ),
-                subtitle: Column(
-                  children: [
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.phone_android,
-                          color: Colors.black87,
+            Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Image(
+                    height: 80,
+                    width: 80,
+                    image: AssetImage("assets/images/product_0.png"),
+                  ),
+                  SizedBox(
+                    width: 130,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        RichText(
+                          overflow: TextOverflow.ellipsis,
+                          text: TextSpan(
+                              text: 'Name: ',
+                              style: TextStyle(
+                                  color: Colors.blueGrey.shade800,
+                                  fontSize: 13.0),
+                              children: [
+                                TextSpan(
+                                    text: 'Long Sleeve Shirts',
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold)),
+                              ]),
                         ),
-                        Text(
-                          '0335029637',
-                          style: TextStyle(color: Colors.red),
-                        )
+                        RichText(
+                          maxLines: 1,
+                          text: TextSpan(
+                              text: 'Price: ' r"$",
+                              style: TextStyle(
+                                  color: Colors.blueGrey.shade800,
+                                  fontSize: 13.0),
+                              children: [
+                                TextSpan(
+                                    text: '\165',
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold)),
+                              ]),
+                        ),
                       ],
                     ),
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.email_outlined,
-                          color: Colors.black87,
-                        ),
-                        Text(
-                          'nguyennhi1642017@gmail.com',
-                          style: TextStyle(color: Colors.blue),
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              ),
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.delete,
+                        color: Colors.red.shade800,
+                      )),
+                ]),
+            SizedBox(
+              height: 20,
             ),
-            Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                  side: const BorderSide(color: Colors.deepPurple, width: 1)),
-              child: ListTile(
-                title: const Text(
-                  'Tran Thanh Dan',
-                  style: TextStyle(fontSize: 20),
-                ),
-                subtitle: Column(
-                  children: [
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.phone_android,
-                          color: Colors.black87,
+            Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Image(
+                    height: 80,
+                    width: 80,
+                    image: AssetImage("assets/images/product_0.png"),
+                  ),
+                  SizedBox(
+                    width: 130,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        RichText(
+                          overflow: TextOverflow.ellipsis,
+                          text: TextSpan(
+                              text: 'Name: ',
+                              style: TextStyle(
+                                  color: Colors.blueGrey.shade800,
+                                  fontSize: 13.0),
+                              children: [
+                                TextSpan(
+                                    text: 'Long Sleeve Shirts',
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold)),
+                              ]),
                         ),
-                        Text(
-                          '06767923434',
-                          style: TextStyle(color: Colors.red),
-                        )
+                        RichText(
+                          maxLines: 1,
+                          text: TextSpan(
+                              text: 'Price: ' r"$",
+                              style: TextStyle(
+                                  color: Colors.blueGrey.shade800,
+                                  fontSize: 13.0),
+                              children: [
+                                TextSpan(
+                                    text: '\165',
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold)),
+                              ]),
+                        ),
                       ],
                     ),
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.email_outlined,
-                          color: Colors.black87,
-                        ),
-                        Text(
-                          'dantt@gmail.com',
-                          style: TextStyle(color: Colors.blue),
-                        )
-                      ],
-                    )
-                  ],
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.delete,
+                        color: Colors.red.shade800,
+                      )),
+                ]),
+            Container(
+              color: Colors.grey,
+              alignment: Alignment.center,
+              height: 50.0,
+              child: const Text(
+                'Proceed to Pay',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),

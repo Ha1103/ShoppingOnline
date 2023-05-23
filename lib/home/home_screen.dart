@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shoponline/menu_add.dart';
 import 'package:shoponline/shopping_cart/shopping_cart_screen.dart';
+import 'package:shoponline/home/coponents/new_arrival_products.dart';
+import 'package:shoponline/home/coponents/popular_products.dart';
 
 class Home_screen extends StatefulWidget {
   const Home_screen({Key? key}) : super(key: key);
@@ -12,9 +14,10 @@ class Home_screen extends StatefulWidget {
 class _Home_screenState extends State<Home_screen> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Shopping Online',
           style: TextStyle(color: Colors.black87),
         ),
@@ -27,7 +30,7 @@ class _Home_screenState extends State<Home_screen> {
                     builder: (context) => const Shopping_cart_screen()),
               );
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.shopping_cart_outlined,
               color: Colors.black87,
             ),
@@ -42,18 +45,18 @@ class _Home_screenState extends State<Home_screen> {
           children: [
             Form(
                 child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Search items...",
                 filled: true,
                 border: outlineInputBorder,
                 enabledBorder: outlineInputBorder,
                 focusedBorder: outlineInputBorder,
                 prefixIcon: Padding(
-                  padding: const EdgeInsets.all(12),
+                  padding: EdgeInsets.all(12),
                   child: Icon(Icons.search_outlined),
                 ),
                 suffixIcon: Padding(
-                  padding: const EdgeInsets.symmetric(
+                  padding: EdgeInsets.symmetric(
                     horizontal: defaultPadding,
                     vertical: defaultPadding / 2,
                   ),
@@ -63,7 +66,12 @@ class _Home_screenState extends State<Home_screen> {
                   ),
                 ),
               ),
-            ))
+            )),
+            const SizedBox(
+              height: 20,
+            ),
+            const NewArrivalProducts(),
+            const PopularProducts(),
           ],
         ),
       ),
